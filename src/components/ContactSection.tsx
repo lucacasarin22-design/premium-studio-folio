@@ -25,7 +25,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-32 md:py-48 border-t border-border">
+    <section id="contact" ref={ref} className="py-20 md:py-24 border-t border-border">
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div
