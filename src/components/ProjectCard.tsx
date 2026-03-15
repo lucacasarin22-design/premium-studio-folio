@@ -7,65 +7,61 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <article className="group rounded-[28px] border border-border bg-card/50 px-6 py-6 md:px-8 md:py-8 transition-all duration-500 hover:border-primary/40 hover:bg-card/80">
-      <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-8 md:gap-10 items-start">
-        {/* Image */}
+    <article className="group rounded-[22px] border border-border bg-card/70 px-5 py-5 md:px-6 md:py-6 transition-all duration-500 hover:border-primary/40 hover:bg-card">
+      <div className="grid grid-cols-1 lg:grid-cols-[260px_minmax(0,1fr)] gap-6 md:gap-8 items-start">
         <Link to={`/project/${project.id}`} className="block">
-          <div className="overflow-hidden rounded-2xl border border-border bg-secondary/30">
+          <div className="overflow-hidden rounded-xl border border-border bg-secondary/30">
             <img
               src={project.cover}
               alt={project.title}
-              className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               loading="lazy"
             />
           </div>
         </Link>
 
-        {/* Content */}
         <div className="min-w-0">
-          <div className="flex flex-col gap-3 md:gap-4">
-            <div className="flex flex-col xl:flex-row xl:items-center xl:gap-4">
-              <p className="font-body text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-                {project.year} · {project.category}
-              </p>
-            </div>
+          <div className="flex flex-col gap-3">
+            <p className="font-body text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+              {project.year} · {project.category}
+            </p>
 
             <Link to={`/project/${project.id}`} className="block">
-              <h3 className="font-display text-3xl md:text-5xl text-foreground leading-[1.05] transition-colors duration-500 group-hover:text-primary">
+              <h3 className="font-display text-2xl md:text-4xl text-foreground leading-[1.08] transition-colors duration-500 group-hover:text-primary">
                 {project.title}
               </h3>
             </Link>
 
-            <p className="font-body text-base md:text-[1.15rem] italic text-muted-foreground leading-relaxed">
+            <p className="font-body text-sm md:text-lg italic text-muted-foreground leading-relaxed">
               {project.summary}
             </p>
 
-            <p className="font-body text-base md:text-lg text-foreground leading-relaxed max-w-4xl pt-2">
+            <p className="font-body text-sm md:text-base text-foreground leading-relaxed max-w-4xl pt-1">
               {project.overview}
             </p>
 
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-2 pt-2">
               {project.tools.slice(0, 5).map((tool) => (
                 <span
                   key={tool}
-                  className="font-body text-sm md:text-base text-primary px-4 py-2 rounded-xl bg-secondary border border-border"
+                  className="font-body text-xs md:text-sm text-primary px-3 py-1.5 rounded-lg bg-secondary border border-border"
                 >
                   {tool}
                 </span>
               ))}
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 pt-6">
+            <div className="flex flex-wrap items-center gap-3 pt-5">
               <Link
                 to={`/project/${project.id}`}
-                className="inline-flex items-center justify-center font-body text-base md:text-lg font-medium text-primary-foreground bg-primary px-7 py-3 rounded-2xl hover:bg-primary/85 transition-all duration-500"
+                className="inline-flex items-center justify-center font-body text-sm md:text-base font-medium text-primary-foreground bg-primary px-5 py-2.5 rounded-xl hover:bg-primary/85 transition-all duration-500"
               >
                 Leggi di più
               </Link>
 
               <Link
                 to={`/project/${project.id}`}
-                className="inline-flex items-center justify-center font-body text-base md:text-lg font-medium text-primary border border-border px-7 py-3 rounded-2xl hover:border-primary hover:bg-secondary/60 transition-all duration-500"
+                className="inline-flex items-center justify-center font-body text-sm md:text-base font-medium text-primary border border-border px-5 py-2.5 rounded-xl hover:border-primary hover:bg-secondary/60 transition-all duration-500"
               >
                 View Project
               </Link>
