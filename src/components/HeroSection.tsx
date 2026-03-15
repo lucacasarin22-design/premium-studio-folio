@@ -2,29 +2,34 @@ import portrait from "@/assets/luca-casarin.jpeg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[82vh] flex items-center overflow-hidden pt-16 md:pt-20 pb-10 md:pb-14">
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center">
-          <div className="flex justify-center md:justify-center">
+    <section className="relative min-h-[70vh] flex items-center pt-20 pb-12">
+      <div className="max-w-[1300px] mx-auto px-6 md:px-12 w-full">
+
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-14">
+
+          {/* FOTO */}
+          <div className="flex-shrink-0">
             <img
               src={portrait}
               alt="Luca Casarin"
-              className="w-64 md:w-80 aspect-square object-cover object-[center_22%] rounded-3xl shadow-2xl"
+              className="w-56 md:w-64 h-56 md:h-64 object-cover object-center rounded-2xl shadow-xl"
             />
           </div>
 
-          <div className="text-center md:text-left">
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-foreground">
+          {/* TESTO */}
+          <div className="flex flex-col justify-center text-center md:text-left">
+
+            <h1 className="font-display text-5xl md:text-7xl font-semibold text-foreground leading-tight">
               Luca Casarin
             </h1>
 
-            <p className="font-body text-lg text-muted-foreground mt-4">
+            <p className="font-body text-lg text-muted-foreground mt-3">
               Digital Innovation • Strategy • Business
             </p>
 
-            <div className="mt-8 space-y-3">
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <span>✉</span>
+            <div className="mt-6 space-y-2">
+
+              <div>
                 <a
                   href="mailto:luca.casarin22@gmail.com"
                   className="text-foreground hover:text-primary transition-colors"
@@ -33,8 +38,7 @@ const HeroSection = () => {
                 </a>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <span>☎</span>
+              <div>
                 <a
                   href="tel:+393664045983"
                   className="text-foreground hover:text-primary transition-colors"
@@ -43,8 +47,7 @@ const HeroSection = () => {
                 </a>
               </div>
 
-              <div className="flex items-center justify-center md:justify-start gap-3">
-                <span>in</span>
+              <div>
                 <a
                   href="https://www.linkedin.com/in/lucafcasarin/"
                   target="_blank"
@@ -54,19 +57,22 @@ const HeroSection = () => {
                   linkedin.com/in/lucafcasarin
                 </a>
               </div>
+
             </div>
 
-            <div className="mt-8 flex justify-center md:justify-start">
+            <div className="mt-6">
               <a
                 href="/cv-luca-casarin.pdf"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-primary-foreground bg-primary px-6 py-3 rounded-xl hover:bg-primary/85 transition-all duration-500"
+                className="inline-flex items-center gap-2 font-body text-sm font-medium text-primary-foreground bg-primary px-5 py-2.5 rounded-lg hover:bg-primary/85 transition"
               >
-                📄 Download CV
+                Download CV
               </a>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
