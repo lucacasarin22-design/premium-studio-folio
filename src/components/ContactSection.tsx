@@ -16,7 +16,6 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder — integrate with your backend
     console.log("Form submitted:", formData);
     setFormData({ name: "", email: "", message: "" });
   };
@@ -32,7 +31,7 @@ const ContactSection = () => {
               Contact
             </p>
             <h2 className="font-display text-4xl md:text-6xl text-foreground mb-10">
-              Let's Work Together
+              Get in Touch
             </h2>
 
             <div className="space-y-6">
@@ -51,9 +50,9 @@ const ContactSection = () => {
               <div>
                 <a
                   href="#"
-                  className="inline-block font-body text-xs uppercase tracking-[0.25em] text-primary border-b border-primary pb-1 hover:text-foreground hover:border-foreground transition-colors duration-500 mt-4"
+                  className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-primary-foreground bg-primary/30 border border-primary px-5 py-2.5 rounded-lg hover:bg-primary/50 transition-all duration-500 mt-4"
                 >
-                  Download CV →
+                  📄 Download CV
                 </a>
               </div>
             </div>
@@ -72,7 +71,7 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
               <div>
@@ -84,7 +83,7 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
               <div>
@@ -96,12 +95,12 @@ const ContactSection = () => {
                   rows={4}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-transparent border-b border-border pb-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500 resize-none"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500 resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="font-body text-xs uppercase tracking-[0.25em] text-background bg-foreground px-8 py-4 hover:bg-primary hover:text-foreground transition-all duration-500"
+                className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground bg-primary px-8 py-4 rounded-lg hover:bg-primary/80 transition-all duration-500"
               >
                 Send Message
               </button>

@@ -88,6 +88,11 @@ export default {
           "0%": { transform: "scaleX(0)" },
           "100%": { transform: "scaleX(1)" },
         },
+        "float": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(10px, -15px) scale(1.02)" },
+          "66%": { transform: "translate(-8px, 8px) scale(0.98)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -95,6 +100,7 @@ export default {
         "reveal-up": "reveal-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "fade-in-slow": "fade-in-slow 1.2s ease forwards",
         "line-expand": "line-expand 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards",
+        "float": "float 8s ease-in-out infinite",
       },
     },
   },

@@ -6,7 +6,7 @@ const Footer = () => {
           © {new Date().getFullYear()} Your Name. All rights reserved.
         </p>
         <div className="flex items-center gap-8">
-          {["Twitter", "LinkedIn", "Dribbble", "Instagram"].map((link) => (
+          {["LinkedIn", "GitHub", "Email"].map((link) => (
             <a
               key={link}
               href="#"

@@ -14,11 +14,11 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       to={`/project/${project.id}`}
       className={`group block ${isOdd ? "md:mt-24" : ""}`}
     >
-      <div className="overflow-hidden">
+      <div className="overflow-hidden rounded-xl">
         <img
           src={project.cover}
           alt={project.title}
-          className="w-full aspect-[4/5] object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000"
+          className="w-full aspect-[4/5] object-cover group-hover:scale-105 transition-all duration-1000"
           loading="lazy"
         />
       </div>
