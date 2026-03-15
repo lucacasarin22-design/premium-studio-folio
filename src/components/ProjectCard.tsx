@@ -52,13 +52,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </div>
 
             <div className="pt-3">
-  <Link
-    to={`/project/${project.id}`}
-    className="inline-flex items-center justify-center font-body text-sm font-semibold text-primary-foreground bg-primary px-5 py-2.5 rounded-lg hover:bg-primary/85 transition-all duration-500"
-  >
-    View Project
-  </Link>
-</div>
+              <Link
+                to={`/project/${project.id}`}
+                className="inline-flex items-center justify-center font-body text-sm font-semibold text-primary-foreground bg-primary px-5 py-2.5 rounded-lg hover:bg-primary/85 transition-all duration-500"
+              >
+                View Project
+              </Link>
+            </div>
           </div>
         </div>
       </div>
