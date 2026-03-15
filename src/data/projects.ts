@@ -20,19 +20,25 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
+{
   id: "celya-platform",
   title: "CELYA platform",
   year: "2025",
   category: "Digital Transformation",
   summary: "Digital Transformation – Digital Business Strategy & Business Models",
-  overview: "Short executive summary here.",
-  problem: "Problem text...",
-  process: "Process text...",
-  outcome: "Outcome text...",
-  tools: ["Platform Strategy", "Business Models", "Growth Strategy"],
-  cover: celyaCover,
-  galleryImages: [celya1, celya2],
+  overview: "CELYA is a digital platform concept designed to bring transparency, regulation and trust to the medicinal mushrooms market.",
+  problem: "The medicinal mushrooms market is rapidly expanding but remains fragmented, poorly regulated and difficult for consumers to understand. Users struggle to identify reliable products and scientifically validated information.",
+  process: "The project focused on designing a multi-sided platform capable of connecting users, trusted brands and scientific validation. The platform architecture integrates data-driven personalization, educational content and trust mechanisms to support informed decision making.",
+  outcome: "The resulting concept defines a scalable digital platform combining marketplace logic, personalized wellness recommendations and verified scientific evidence, aiming to create a more transparent and trustworthy ecosystem.",
+  tools: [
+    "Platform Strategy",
+    "Business Models",
+    "Growth Strategy",
+    "Digital Transformation"
+  ],
+  cover: project1,
+  galleryImages: [project1, project2],
+
   fullNarrative: `
 CELYA is a digital platform designed to make the medicinal mushrooms market more transparent, regulated and understandable.
 
@@ -41,7 +47,8 @@ The project started from the observation that demand for personalized wellness s
 From a strategic perspective, the core challenge was to define a platform model able to create value for both users and ecosystem stakeholders.
 
 The proposed solution integrates platform logic, data-driven personalization and trust-building mechanisms through scientific evidence and curated user experience.
-`,
+  `,
+
   pdfUrl: "/projects/celya.pdf",
   slidesUrl: "https://your-slides-link.com"
 },
