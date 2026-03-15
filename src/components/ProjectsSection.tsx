@@ -20,7 +20,7 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-32 md:py-40">
+    <section id="projects" ref={sectionRef} className="py-20 md:py-24">
       <div className="max-w-[1500px] mx-auto px-6 md:px-12">
         <div
           className={`mb-16 md:mb-20 transition-all duration-1000 ${
