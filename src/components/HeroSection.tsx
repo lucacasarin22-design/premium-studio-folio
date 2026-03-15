@@ -14,7 +14,7 @@ const HeroSection = () => {
           </div>
 
           <div className="text-center md:text-left">
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium text-foreground">
               Luca Casarin
             </h1>
 
