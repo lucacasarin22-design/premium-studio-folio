@@ -7,10 +7,14 @@ const ContactSection = () => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setVisible(true); },
+      ([entry]) => {
+        if (entry.isIntersecting) setVisible(true);
+      },
       { threshold: 0.15 }
     );
+
     if (ref.current) observer.observe(ref.current);
+
     return () => observer.disconnect();
   }, []);
 
@@ -25,60 +29,57 @@ const ContactSection = () => {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
           <div
-            className={`md:col-span-5 transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`md:col-span-5 transition-all duration-1000 ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
           >
             <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
               Contact
             </p>
+
             <h2 className="font-display text-4xl md:text-6xl text-foreground mb-10">
               Get in Touch
             </h2>
 
-            
-
             <div className="space-y-6">
-
-  <div>
-    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-      Email
-    </p>
-    <a
-      href="mailto:luca.casarin22@gmail.com"
-      className="text-foreground hover:text-primary transition-colors"
-    >
-      luca.casarin22@gmail.com
-    </a>
-  </div>
-
-  <div>
-    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-      Phone
-    </p>
-    <a
-      href="tel:+393664045983"
-      className="text-foreground hover:text-primary transition-colors"
-    >
-      +39 366 4045983
-    </a>
-  </div>
-
-  <div>
-    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
-      LinkedIn
-    </p>
-    <a
-      href="https://www.linkedin.com/in/lucafcasarin/"
-      target="_blank"
-      rel="noreferrer"
-      className="text-foreground hover:text-primary transition-colors"
-    >
-      linkedin.com/in/lucafcasarin
-    </a>
-  </div>
-
-</div>
+              <div>
+                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">
+                  Email
+                </p>
+                <a
+                  href="mailto:luca.casarin22@gmail.com"
+                  className="font-body text-sm text-foreground hover:text-primary transition-colors duration-500"
+                >
+                  luca.casarin22@gmail.com
                 </a>
               </div>
+
+              <div>
+                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">
+                  Phone
+                </p>
+                <a
+                  href="tel:+393664045983"
+                  className="font-body text-sm text-foreground hover:text-primary transition-colors duration-500"
+                >
+                  +39 366 404 5983
+                </a>
+              </div>
+
+              <div>
+                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">
+                  LinkedIn
+                </p>
+                <a
+                  href="https://www.linkedin.com/in/lucafcasarin/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-body text-sm text-foreground hover:text-primary transition-colors duration-500"
+                >
+                  linkedin.com/in/lucafcasarin
+                </a>
+              </div>
+
               <div>
                 <a
                   href="#"
@@ -91,7 +92,9 @@ const ContactSection = () => {
           </div>
 
           <div
-            className={`md:col-span-6 md:col-start-7 transition-all duration-1000 delay-200 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"}`}
+            className={`md:col-span-6 md:col-start-7 transition-all duration-1000 delay-200 ${
+              visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+            }`}
           >
             <form onSubmit={handleSubmit} className="space-y-8">
               <div>
@@ -106,6 +109,7 @@ const ContactSection = () => {
                   className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
+
               <div>
                 <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
                   Email
@@ -118,6 +122,7 @@ const ContactSection = () => {
                   className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
+
               <div>
                 <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
                   Message
@@ -130,6 +135,7 @@ const ContactSection = () => {
                   className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500 resize-none"
                 />
               </div>
+
               <button
                 type="submit"
                 className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground bg-primary px-8 py-4 rounded-lg hover:bg-primary/80 transition-all duration-500"
