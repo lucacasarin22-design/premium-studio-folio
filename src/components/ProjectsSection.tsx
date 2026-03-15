@@ -21,9 +21,9 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" ref={sectionRef} className="py-20 md:py-24">
-      <div className="max-w-[1500px] mx-auto px-6 md:px-12">
+      <div className="max-w-[1380px] mx-auto px-6 md:px-12">
         <div
-          className={`mb-16 md:mb-20 transition-all duration-1000 ${
+          className={`mb-14 md:mb-16 text-center transition-all duration-1000 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -35,22 +35,20 @@ const ProjectsSection = () => {
             Academic & Strategic Work
           </h2>
 
-          <p className="font-body text-sm md:text-base text-muted-foreground mt-4 max-w-3xl leading-relaxed">
+          <p className="font-body text-sm md:text-base text-muted-foreground mt-4 max-w-3xl mx-auto leading-relaxed">
             A selection of projects focused on digital innovation, business strategy,
             platform thinking, AI applications, and structured problem solving.
-            The goal is not only to present outcomes, but also the reasoning,
-            context, and strategic logic behind each project.
           </p>
 
           <div
-            className={`h-px bg-border mt-8 origin-left ${
+            className={`h-px bg-border mt-8 max-w-md mx-auto origin-center ${
               visible ? "animate-line-expand" : "scale-x-0"
             }`}
             style={{ animationDelay: "0.3s" }}
           />
         </div>
 
-        <div className="space-y-10 md:space-y-12">
+        <div className="space-y-8 md:space-y-10">
           {projects.map((project, i) => (
             <div
               key={project.id}
