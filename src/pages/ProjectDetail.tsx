@@ -16,9 +16,12 @@ const ProjectDetail = () => {
     return (
       <div className="bg-background min-h-screen flex items-center justify-center">
         <Navbar />
-        <div className="text-center">
+        <div className="text-center px-6">
           <h1 className="font-display text-4xl text-foreground mb-4">Project not found</h1>
-          <Link to="/" className="font-body text-xs uppercase tracking-[0.25em] text-primary border-b border-primary pb-1">
+          <Link
+            to="/"
+            className="font-body text-xs uppercase tracking-[0.25em] text-primary border-b border-primary pb-1"
+          >
             Back to Home →
           </Link>
         </div>
@@ -26,20 +29,13 @@ const ProjectDetail = () => {
     );
   }
 
-  const sections = [
-    { label: "Overview", content: project.overview },
-    { label: "Problem", content: project.problem },
-    { label: "Process", content: project.process },
-    { label: "Outcome", content: project.outcome },
-  ];
-
   return (
     <div className="bg-background min-h-screen">
       <Navbar />
 
       {/* Hero */}
       <section className="pt-20">
-        <div className="w-full h-[60vh] md:h-[75vh] overflow-hidden">
+        <div className="w-full h-[55vh] md:h-[72vh] overflow-hidden">
           <img
             src={project.cover}
             alt={project.title}
@@ -48,50 +44,85 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Title block */}
-      <section className="max-w-[1000px] mx-auto px-6 md:px-12 py-20 md:py-32">
-        <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4 opacity-0 animate-reveal-up" style={{ animationDelay: "0.2s" }}>
+      {/* Intro */}
+      <section className="max-w-[950px] mx-auto px-6 md:px-12 py-20 md:py-28">
+        <p
+          className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4 opacity-0 animate-reveal-up"
+          style={{ animationDelay: "0.15s" }}
+        >
           {project.category} — {project.year}
         </p>
-        <h1 className="font-display text-5xl md:text-7xl text-foreground opacity-0 animate-reveal-up" style={{ animationDelay: "0.35s" }}>
+
+        <h1
+          className="font-display text-5xl md:text-7xl text-foreground opacity-0 animate-reveal-up"
+          style={{ animationDelay: "0.3s" }}
+        >
           {project.title}
         </h1>
-        <p className="font-body text-base md:text-lg text-muted-foreground mt-8 max-w-2xl leading-relaxed opacity-0 animate-reveal-up" style={{ animationDelay: "0.5s" }}>
+
+        <p
+          className="font-body text-lg md:text-xl text-muted-foreground mt-8 max-w-3xl leading-relaxed opacity-0 animate-reveal-up"
+          style={{ animationDelay: "0.45s" }}
+        >
           {project.summary}
         </p>
       </section>
 
-      {/* Content sections */}
-      <section className="max-w-[1000px] mx-auto px-6 md:px-12 pb-20">
-        {sections.map((section, i) => (
-          <div key={section.label} className="mb-16 md:mb-24">
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12">
-              <div className="md:col-span-3">
-                <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground sticky top-24">
-                  {String(i + 1).padStart(2, "0")} — {section.label}
-                </p>
-              </div>
-              <div className="md:col-span-8 md:col-start-5">
-                <p className="font-body text-sm md:text-base text-foreground leading-relaxed">
-                  {section.content}
-                </p>
-              </div>
-            </div>
-            <div className="h-px bg-border mt-12" />
-          </div>
-        ))}
+      {/* Flowing narrative */}
+      <section className="max-w-[950px] mx-auto px-6 md:px-12 pb-12">
+        <div className="max-w-3xl">
+          <p className="font-body text-base md:text-lg text-foreground leading-8 mb-10">
+            {project.overview}
+          </p>
+
+          <img
+            src={project.galleryImages[0]}
+            alt={`${project.title} visual 1`}
+            className="w-full rounded-2xl object-cover mb-10"
+            loading="lazy"
+          />
+
+          <p className="font-body text-base md:text-lg text-foreground leading-8 mb-10">
+            {project.problem}
+          </p>
+
+          <p className="font-body text-base md:text-lg text-foreground leading-8 mb-10">
+            {project.process}
+          </p>
+
+          <img
+            src={project.galleryImages[1]}
+            alt={`${project.title} visual 2`}
+            className="w-full rounded-2xl object-cover mb-10"
+            loading="lazy"
+          />
+
+          <p className="font-body text-base md:text-lg text-foreground leading-8 mb-10">
+            {project.outcome}
+          </p>
+
+          {project.galleryImages[2] && (
+            <img
+              src={project.galleryImages[2]}
+              alt={`${project.title} visual 3`}
+              className="w-full rounded-2xl object-cover mb-6"
+              loading="lazy"
+            />
+          )}
+        </div>
       </section>
 
       {/* Tools */}
-      <section className="max-w-[1000px] mx-auto px-6 md:px-12 pb-20">
+      <section className="max-w-[950px] mx-auto px-6 md:px-12 py-10 md:py-16">
+        <div className="h-px bg-border mb-8" />
         <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-6">
-          Tools & Technologies
+          Tools & Skills
         </p>
         <div className="flex flex-wrap gap-3">
           {project.tools.map((tool) => (
             <span
               key={tool}
-              className="font-body text-xs tracking-wide text-foreground border border-border px-4 py-2 rounded-lg"
+              className="font-body text-xs tracking-wide text-foreground border border-border bg-secondary/40 px-4 py-2 rounded-full"
             >
               {tool}
             </span>
@@ -99,36 +130,8 @@ const ProjectDetail = () => {
         </div>
       </section>
 
-      {/* Gallery */}
-      <section className="pb-32">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-10">
-            Gallery
-          </p>
-          <div className="mb-4">
-            <img
-              src={project.galleryImages[0]}
-              alt={`${project.title} gallery 1`}
-              className="w-full aspect-video object-cover rounded-xl"
-              loading="lazy"
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {project.galleryImages.slice(1).map((img, i) => (
-              <img
-                key={i}
-                src={img}
-                alt={`${project.title} gallery ${i + 2}`}
-                className="w-full aspect-square object-cover rounded-xl"
-                loading="lazy"
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Back link */}
-      <section className="max-w-[1000px] mx-auto px-6 md:px-12 pb-32">
+      {/* Back */}
+      <section className="max-w-[950px] mx-auto px-6 md:px-12 pb-28">
         <Link
           to="/#projects"
           className="font-body text-xs uppercase tracking-[0.25em] text-primary border-b border-primary pb-1 hover:text-foreground hover:border-foreground transition-colors duration-500"
