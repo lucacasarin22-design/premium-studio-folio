@@ -1,4 +1,4 @@
-import portrait from "@/assets/luca-casarin.jpg";
+import portrait from "@/assets/luca-casarin.jpeg";
 
 const HeroSection = () => {
   return (
