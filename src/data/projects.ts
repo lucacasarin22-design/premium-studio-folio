@@ -21,19 +21,30 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "meridian-rebrand",
-    title: "Meridian Rebrand",
-    category: "Brand Identity",
-    summary: "A complete visual identity overhaul for a luxury hospitality group, redefining their presence across digital and physical touchpoints.",
-    cover: project1,
-    year: "2025",
-    overview: "Meridian Hotels needed a rebrand that reflected their evolution from a regional chain to an internationally recognized luxury brand. The challenge was to honor heritage while signaling a bold new chapter.",
-    problem: "The existing brand felt dated and inconsistent across properties. There was no unified design language, and the digital experience lagged behind competitors.",
-    process: "We began with extensive stakeholder interviews and competitive analysis. From there, we developed a new visual system rooted in architectural geometry and natural textures — a nod to the environments each property inhabits.",
-    outcome: "The rebrand launched across 12 properties simultaneously. Within six months, brand recognition increased 40% and direct bookings rose 28%.",
-    tools: ["Figma", "After Effects", "Blender", "Webflow"],
-    galleryImages: [project1, project2, project3],
-  },
+  id: "celya-platform",
+  title: "CELYA platform",
+  year: "2025",
+  category: "Digital Transformation",
+  summary: "Digital Transformation – Digital Business Strategy & Business Models",
+  overview: "Short executive summary here.",
+  problem: "Problem text...",
+  process: "Process text...",
+  outcome: "Outcome text...",
+  tools: ["Platform Strategy", "Business Models", "Growth Strategy"],
+  cover: celyaCover,
+  galleryImages: [celya1, celya2],
+  fullNarrative: `
+CELYA is a digital platform designed to make the medicinal mushrooms market more transparent, regulated and understandable.
+
+The project started from the observation that demand for personalized wellness solutions is rising, while trust and scientific validation remain fragmented.
+
+From a strategic perspective, the core challenge was to define a platform model able to create value for both users and ecosystem stakeholders.
+
+The proposed solution integrates platform logic, data-driven personalization and trust-building mechanisms through scientific evidence and curated user experience.
+`,
+  pdfUrl: "/projects/celya.pdf",
+  slidesUrl: "https://your-slides-link.com"
+},
   {
     id: "noir-beauty",
     title: "Noir Beauty",
