@@ -25,25 +25,27 @@ const AboutSection = () => {
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
+          <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
             About Me
           </p>
 
-          <h2 className="font-display text-4xl md:text-6xl text-foreground mb-8">
-            A profile at the intersection of business, innovation and strategy
+          <h2 className="font-display text-5xl md:text-6xl text-foreground mb-8">
+            Business, innovation and structured problem solving
           </h2>
 
-          <p className="font-body text-base md:text-xl leading-relaxed text-foreground max-w-3xl mx-auto">
+          <p className="font-body text-lg md:text-[1.35rem] leading-relaxed text-foreground max-w-3xl mx-auto">
             I am currently pursuing a Master’s degree in Digital Innovation and New Business Design
             at POLIMI Graduate School of Management. My interests lie in digital transformation,
-            strategic thinking, business models, and problem solving through structured analysis.
+            strategic thinking, business models, and applied problem solving.
           </p>
 
-          <p className="font-body text-base md:text-xl leading-relaxed text-muted-foreground max-w-3xl mx-auto mt-6">
-            This portfolio brings together academic and project-based work developed across innovation,
-            strategy, platform thinking, and digital business contexts, with the goal of presenting
-            not only final outputs, but also the reasoning behind them.
+          <p className="font-body text-lg md:text-[1.35rem] leading-relaxed text-muted-foreground max-w-3xl mx-auto mt-6">
+            This portfolio collects academic and project-based work developed across innovation,
+            strategy, platform thinking, and digital business contexts, with the goal of showing
+            both outcomes and the reasoning behind them.
           </p>
+
+          <div className="h-px bg-border mt-14 max-w-md mx-auto" />
         </div>
       </div>
     </section>
