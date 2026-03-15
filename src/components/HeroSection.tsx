@@ -12,7 +12,7 @@ const HeroSection = () => {
             <img
               src={portrait}
               alt="Luca Casarin"
-              className="w-56 md:w-64 h-56 md:h-64 object-cover object-center rounded-2xl shadow-xl"
+              className="w-56 md:w-64 h-56 md:h-64 object-cover object-[center_30%] rounded-2xl shadow-xl"
             />
           </div>
 
