@@ -23,8 +23,12 @@ const ProjectsSection = () => {
             Selected Work
           </p>
           <h2 className="font-display text-4xl md:text-6xl text-foreground">
-            Projects
+            Academic Projects
           </h2>
+          <p className="font-body text-sm text-muted-foreground mt-4 max-w-2xl leading-relaxed">
+            A selection of academic projects showcasing my journey across strategy, digital innovation, 
+            AI, and design thinking — translating research and analysis into concrete, structured solutions.
+          </p>
           <div className={`h-px bg-border mt-8 origin-left ${visible ? "animate-line-expand" : "scale-x-0"}`} style={{ animationDelay: "0.3s" }} />
         </div>
 

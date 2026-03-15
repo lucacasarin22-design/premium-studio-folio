@@ -1,45 +1,108 @@
-import heroBg from "@/assets/hero-bg.jpg";
+import portrait from "@/assets/portrait.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-end overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <img
-          src={heroBg}
-          alt=""
-          className="w-full h-full object-cover animate-fade-in-slow"
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
+      {/* Decorative organic blobs */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute top-[10%] right-[5%] w-64 h-40 rounded-full border border-foreground/20 animate-float"
+          style={{ animationDelay: "0s" }}
         />
-        <div className="absolute inset-0 bg-background/40" />
+        <div
+          className="absolute top-[60%] left-[3%] w-48 h-32 rounded-full border border-foreground/15 animate-float"
+          style={{ animationDelay: "2s" }}
+        />
+        <div
+          className="absolute top-[15%] left-[10%] w-32 h-32 rounded-full bg-accent/20 animate-float"
+          style={{ animationDelay: "1s" }}
+        />
+        <div
+          className="absolute bottom-[20%] right-[15%] w-44 h-44 rounded-full bg-accent/15 animate-float"
+          style={{ animationDelay: "3s" }}
+        />
+        <div
+          className="absolute top-[45%] right-[30%] w-24 h-24 rounded-full bg-primary/10 animate-float"
+          style={{ animationDelay: "4s" }}
+        />
+        <div
+          className="absolute bottom-[10%] left-[20%] w-56 h-36 rounded-full border border-foreground/10 animate-float"
+          style={{ animationDelay: "5s" }}
+        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-12 pb-20 md:pb-32">
-        <div className="overflow-hidden">
-          <h1
-            className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-light text-foreground animate-reveal-up"
-            style={{ animationDelay: "0.3s" }}
-          >
-            Your Name
-          </h1>
-        </div>
-        <div className="overflow-hidden mt-6">
-          <p
-            className="font-body text-sm md:text-base text-muted-foreground max-w-lg tracking-wide opacity-0 animate-reveal-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-            Creative Director & Designer — crafting meaningful brands, digital
-            experiences, and visual narratives.
-          </p>
-        </div>
-        <div className="overflow-hidden mt-10">
-          <a
-            href="#projects"
-            className="inline-block font-body text-xs uppercase tracking-[0.25em] text-primary border-b border-primary pb-1 hover:text-foreground hover:border-foreground transition-colors duration-500 opacity-0 animate-reveal-up"
-            style={{ animationDelay: "0.9s" }}
-          >
-            View Selected Work →
-          </a>
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
+          {/* Portrait */}
+          <div className="flex justify-center md:justify-start">
+            <div className="relative">
+              <img
+                src={portrait}
+                alt="Portrait"
+                className="w-64 md:w-80 aspect-square object-cover rounded-3xl shadow-2xl opacity-0 animate-reveal-up"
+                style={{ animationDelay: "0.3s" }}
+              />
+              <div
+                className="absolute -bottom-6 -left-6 w-40 h-24 rounded-full border border-foreground/15 animate-float"
+                style={{ animationDelay: "2s" }}
+              />
+            </div>
+          </div>
+
+          {/* Info */}
+          <div>
+            <div className="overflow-hidden">
+              <h1
+                className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-foreground opacity-0 animate-reveal-up"
+                style={{ animationDelay: "0.4s" }}
+              >
+                Your Name
+              </h1>
+            </div>
+            <div className="overflow-hidden mt-4">
+              <p
+                className="font-body text-base md:text-lg text-foreground/80 opacity-0 animate-reveal-up"
+                style={{ animationDelay: "0.55s" }}
+              >
+                Digital Innovation | Product & Strategy
+              </p>
+            </div>
+            <div className="overflow-hidden mt-2">
+              <p
+                className="font-display text-lg italic text-muted-foreground opacity-0 animate-reveal-up"
+                style={{ animationDelay: "0.65s" }}
+              >
+                Technology · Business · Creativity
+              </p>
+            </div>
+
+            {/* Contact info */}
+            <div className="mt-8 space-y-3 opacity-0 animate-reveal-up" style={{ animationDelay: "0.8s" }}>
+              <div className="flex items-center gap-3">
+                <span className="text-foreground/60">✉</span>
+                <a href="mailto:hello@yourname.com" className="font-body text-sm text-foreground hover:text-primary transition-colors duration-300">
+                  hello@yourname.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-foreground/60">in</span>
+                <a href="#" className="font-body text-sm text-foreground hover:text-primary transition-colors duration-300">
+                  Your Name
+                </a>
+              </div>
+            </div>
+
+            <div className="overflow-hidden mt-8">
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-primary-foreground bg-primary/30 border border-primary px-6 py-3 rounded-lg hover:bg-primary/50 transition-all duration-500 opacity-0 animate-reveal-up"
+                style={{ animationDelay: "0.95s" }}
+              >
+                📄 CV
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

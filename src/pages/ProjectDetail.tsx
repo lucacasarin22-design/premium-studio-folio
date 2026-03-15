@@ -91,7 +91,7 @@ const ProjectDetail = () => {
           {project.tools.map((tool) => (
             <span
               key={tool}
-              className="font-body text-xs tracking-wide text-foreground border border-border px-4 py-2"
+              className="font-body text-xs tracking-wide text-foreground border border-border px-4 py-2 rounded-lg"
             >
               {tool}
             </span>
@@ -105,23 +105,21 @@ const ProjectDetail = () => {
           <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-10">
             Gallery
           </p>
-          {/* Full bleed first */}
           <div className="mb-4">
             <img
               src={project.galleryImages[0]}
               alt={`${project.title} gallery 1`}
-              className="w-full aspect-video object-cover"
+              className="w-full aspect-video object-cover rounded-xl"
               loading="lazy"
             />
           </div>
-          {/* Two side by side */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {project.galleryImages.slice(1).map((img, i) => (
               <img
                 key={i}
                 src={img}
                 alt={`${project.title} gallery ${i + 2}`}
-                className="w-full aspect-square object-cover"
+                className="w-full aspect-square object-cover rounded-xl"
                 loading="lazy"
               />
             ))}

@@ -27,20 +27,26 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "bg-background/80 backdrop-blur-md border-b border-border"
+            ? "bg-background/90 backdrop-blur-md border-b border-border"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-20">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex items-center justify-between h-16">
           <Link
             to="/"
-            className="font-display text-xl tracking-wide text-foreground hover:text-primary transition-colors duration-500"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity duration-500"
           >
-            Portfolio
+            <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center font-display text-sm font-semibold text-foreground">
+              YN
+            </div>
+            <div className="hidden sm:block">
+              <p className="font-body text-sm font-medium text-foreground leading-tight">Your Name</p>
+              <p className="font-body text-[10px] text-muted-foreground leading-tight">Technology · Business · Creativity</p>
+            </div>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-12">
+          <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -55,16 +61,16 @@ const Navbar = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden flex flex-col gap-1.5 p-2"
+            className="md:hidden w-10 h-10 rounded-lg bg-secondary flex flex-col items-center justify-center gap-1.5"
             aria-label="Toggle menu"
           >
             <span
-              className={`block w-6 h-px bg-foreground transition-all duration-500 ${
+              className={`block w-5 h-px bg-foreground transition-all duration-500 ${
                 menuOpen ? "rotate-45 translate-y-[3.5px]" : ""
               }`}
             />
             <span
-              className={`block w-6 h-px bg-foreground transition-all duration-500 ${
+              className={`block w-5 h-px bg-foreground transition-all duration-500 ${
                 menuOpen ? "-rotate-45 -translate-y-[3.5px]" : ""
               }`}
             />
