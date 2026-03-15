@@ -33,7 +33,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="font-body text-xl md:text-2xl text-foreground/90 mt-6">
-              Digital Innovation | Strategy | Business
+              Digital Innovation | Product & Strategy
             </p>
 
             <p className="font-body text-lg italic text-muted-foreground mt-4">
