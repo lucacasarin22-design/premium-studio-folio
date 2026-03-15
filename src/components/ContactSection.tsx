@@ -34,17 +34,49 @@ const ContactSection = () => {
               Get in Touch
             </h2>
 
+            
+
             <div className="space-y-6">
-              <div>
-                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">Email</p>
-                <a href="mailto:hello@yourname.com" className="font-body text-sm text-foreground hover:text-primary transition-colors duration-500">
-                  hello@yourname.com
-                </a>
-              </div>
-              <div>
-                <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">LinkedIn</p>
-                <a href="#" className="font-body text-sm text-foreground hover:text-primary transition-colors duration-500">
-                  linkedin.com/in/yourname
+
+  <div>
+    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+      Email
+    </p>
+    <a
+      href="mailto:luca.casarin22@gmail.com"
+      className="text-foreground hover:text-primary transition-colors"
+    >
+      luca.casarin22@gmail.com
+    </a>
+  </div>
+
+  <div>
+    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+      Phone
+    </p>
+    <a
+      href="tel:+393664045983"
+      className="text-foreground hover:text-primary transition-colors"
+    >
+      +39 366 4045983
+    </a>
+  </div>
+
+  <div>
+    <p className="text-xs uppercase tracking-widest text-muted-foreground mb-1">
+      LinkedIn
+    </p>
+    <a
+      href="https://www.linkedin.com/in/lucafcasarin/"
+      target="_blank"
+      rel="noreferrer"
+      className="text-foreground hover:text-primary transition-colors"
+    >
+      linkedin.com/in/lucafcasarin
+    </a>
+  </div>
+
+</div>
                 </a>
               </div>
               <div>
