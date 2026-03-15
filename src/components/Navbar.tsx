@@ -16,11 +16,11 @@ const Navbar = () => {
     setMenuOpen(false);
   }, [location]);
 
-  const navLinks = [
-    { label: "Projects", href: "/#projects" },
-    { label: "About", href: "/#about" },
-    { label: "Contact", href: "/#contact" },
-  ];
+ const navLinks = [
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
+];
 
   return (
     <>
