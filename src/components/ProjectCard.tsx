@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             </p>
 
             <Link to={`/project/${project.id}`} className="block">
-              <h3 className="font-display text-2xl md:text-4xl text-foreground leading-[1.08] transition-colors duration-500 group-hover:text-primary">
+              <h3 className="font-display font-semibold text-2xl md:text-4xl text-foreground leading-[1.08] transition-colors duration-500 group-hover:text-primary">
                 {project.title}
               </h3>
             </Link>
