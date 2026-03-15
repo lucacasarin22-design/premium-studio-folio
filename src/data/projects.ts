@@ -17,6 +17,11 @@ export interface Project {
   outcome: string;
   tools: string[];
   galleryImages: string[];
+
+  fullNarrative?: string;
+  pdfUrl?: string;
+  slidesUrl?: string;
+  externalProjectUrl?: string;
 }
 
 export const projects: Project[] = [
