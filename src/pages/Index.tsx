@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import ProfessionalBackground from "@/components/ProfessionalBackground";
 import AcademicBackground from "@/components/AcademicBackground";
 import ProjectsSection from "@/components/ProjectsSection";
+import GapYearSection from "@/components/GapYearSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <ProfessionalBackground />
         <AcademicBackground />
         <ProjectsSection />
+        <GapYearSection />
         <ContactSection />
       </main>
       <Footer />
