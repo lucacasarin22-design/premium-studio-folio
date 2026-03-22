@@ -23,7 +23,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         <a
           href="/"
           className="font-body text-xs md:text-sm uppercase tracking-[0.28em] text-foreground"

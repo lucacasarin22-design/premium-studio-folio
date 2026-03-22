@@ -13,34 +13,43 @@ const HeroSection = () => {
         <div className="absolute bottom-[24%] left-[18%] w-[240px] h-[100px] border border-foreground/18 rounded-full -rotate-[8deg]" />
       </div>
 
-      <div className="relative z-10 max-w-[1380px] mx-auto w-full px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center min-h-[calc(100vh-80px)]">
+      <div className="relative z-10 max-w-[1100px] mx-auto w-full px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-center min-h-[calc(100vh-80px)]">
           {/* Left: photo */}
           <div className="flex justify-center md:justify-center">
             <div className="w-full flex justify-center">
               <img
                 src={portrait}
                 alt="Luca Casarin"
-                className="w-[300px] h-[380px] md:w-[380px] md:h-[470px] object-cover object-[center_18%] rounded-[36px] shadow-2xl border border-white/30"
+                className="w-[280px] h-[350px] md:w-[340px] md:h-[420px] object-cover object-[center_18%] rounded-[36px] shadow-2xl border border-white/30"
               />
             </div>
           </div>
 
           {/* Right: text */}
           <div className="text-center md:text-left">
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-semibold text-foreground leading-[0.95]">
+            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-semibold text-foreground leading-[0.95]">
               Luca Casarin
             </h1>
 
-            <p className="font-body text-xl md:text-2xl text-foreground/90 mt-6">
+            <p className="font-body text-xl md:text-2xl text-foreground/90 mt-5">
               Digital Innovation | Product & Strategy
             </p>
 
-            <p className="font-body text-lg italic text-muted-foreground mt-4">
+            <p className="font-body text-lg italic text-muted-foreground mt-3">
               Technology · Business · Problem Solving
             </p>
 
-            <div className="mt-10 space-y-3">
+            <div className="mt-4 space-y-1">
+              <p className="font-body text-sm text-muted-foreground">
+                Currently at POLIMI GSoM
+              </p>
+              <p className="font-body text-sm font-medium text-primary">
+                Available from June 2026 – Full time
+              </p>
+            </div>
+
+            <div className="mt-8 space-y-2.5">
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <span className="text-foreground/70">✉</span>
                 <a
@@ -74,7 +83,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="mt-8 flex justify-center md:justify-start">
+            <div className="mt-6 flex justify-center md:justify-start">
               <a
                 href="/cv-luca-casarin.pdf"
                 target="_blank"

@@ -25,23 +25,28 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" ref={ref} className="py-20 md:py-24 border-t border-border">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
+    <section id="contact" ref={ref} className="py-14 md:py-16 border-t border-border">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-12">
+        <div
+          className={`text-center mb-8 transition-all duration-1000 ${
+            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <h2 className="font-display text-4xl md:text-5xl text-foreground mb-3">
+            Let's connect
+          </h2>
+          <p className="font-body text-sm text-muted-foreground">
+            Available from June 2026 for full-time opportunities
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           <div
             className={`md:col-span-5 transition-all duration-1000 ${
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <p className="font-body text-[10px] uppercase tracking-[0.3em] text-muted-foreground mb-4">
-              Contact
-            </p>
-
-            <h2 className="font-display text-4xl md:text-6xl text-foreground mb-10">
-              Get in Touch
-            </h2>
-
-            <div className="space-y-6">
+            <div className="space-y-5">
               <div>
                 <p className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-1">
                   Email
@@ -82,8 +87,10 @@ const ContactSection = () => {
 
               <div>
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-primary-foreground bg-primary/30 border border-primary px-5 py-2.5 rounded-lg hover:bg-primary/50 transition-all duration-500 mt-4"
+                  href="/cv-luca-casarin.pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 font-body text-xs uppercase tracking-[0.2em] text-primary-foreground bg-primary/30 border border-primary px-5 py-2.5 rounded-lg hover:bg-primary/50 transition-all duration-500 mt-2"
                 >
                   📄 Download CV
                 </a>
@@ -96,9 +103,9 @@ const ContactSection = () => {
               visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
             }`}
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
                   Name
                 </label>
                 <input
@@ -106,12 +113,12 @@ const ContactSection = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2.5 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
 
               <div>
-                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
                   Email
                 </label>
                 <input
@@ -119,26 +126,26 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2.5 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500"
                 />
               </div>
 
               <div>
-                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-3">
+                <label className="block font-body text-[10px] uppercase tracking-[0.25em] text-muted-foreground mb-2">
                   Message
                 </label>
                 <textarea
                   required
-                  rows={4}
+                  rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-3 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500 resize-none"
+                  className="w-full bg-secondary/50 border border-border rounded-lg px-4 py-2.5 font-body text-sm text-foreground focus:outline-none focus:border-primary transition-colors duration-500 resize-none"
                 />
               </div>
 
               <button
                 type="submit"
-                className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground bg-primary px-8 py-4 rounded-lg hover:bg-primary/80 transition-all duration-500"
+                className="font-body text-xs uppercase tracking-[0.25em] text-primary-foreground bg-primary px-7 py-3 rounded-lg hover:bg-primary/80 transition-all duration-500"
               >
                 Send Message
               </button>
