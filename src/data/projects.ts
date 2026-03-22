@@ -17,7 +17,6 @@ export interface Project {
   outcome: string;
   tools: string[];
   galleryImages: string[];
-
   fullNarrative?: string;
   pdfUrl?: string;
   slidesUrl?: string;
@@ -25,26 +24,29 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-{
-  id: "celya-platform",
-  title: "CELYA platform",
-  year: "2025",
-  category: "Digital Transformation",
-  summary: "Digital Transformation – Digital Business Strategy & Business Models",
-  overview: "CELYA is a digital platform concept designed to bring transparency, regulation and trust to the medicinal mushrooms market.",
-  problem: "The medicinal mushrooms market is rapidly expanding but remains fragmented, poorly regulated and difficult for consumers to understand. Users struggle to identify reliable products and scientifically validated information.",
-  process: "The project focused on designing a multi-sided platform capable of connecting users, trusted brands and scientific validation. The platform architecture integrates data-driven personalization, educational content and trust mechanisms to support informed decision making.",
-  outcome: "The resulting concept defines a scalable digital platform combining marketplace logic, personalized wellness recommendations and verified scientific evidence, aiming to create a more transparent and trustworthy ecosystem.",
-  tools: [
-    "Platform Strategy",
-    "Business Models",
-    "Growth Strategy",
-    "Digital Transformation"
-  ],
-  cover: project1,
-  galleryImages: [project1, project2],
-
-  fullNarrative: `
+  {
+    id: "celya-platform",
+    title: "CELYA platform",
+    year: "2025",
+    category: "Digital Transformation",
+    summary: "Digital Transformation – Digital Business Strategy & Business Models",
+    overview:
+      "CELYA is a digital platform concept designed to bring transparency, regulation and trust to the medicinal mushrooms market.",
+    problem:
+      "The medicinal mushrooms market is rapidly expanding but remains fragmented, poorly regulated and difficult for consumers to understand.",
+    process:
+      "The project focused on designing a multi-sided platform capable of connecting users, trusted brands and scientific validation.",
+    outcome:
+      "The resulting concept defines a scalable digital platform combining marketplace logic, personalized wellness recommendations and verified scientific evidence.",
+    tools: [
+      "Platform Strategy",
+      "Business Models",
+      "Growth Strategy",
+      "Digital Transformation",
+    ],
+    cover: project1,
+    galleryImages: [project1, project2],
+    fullNarrative: `
 CELYA is a digital platform designed to make the medicinal mushrooms market more transparent, regulated and understandable.
 
 The project started from the observation that demand for personalized wellness solutions is rising, while trust and scientific validation remain fragmented.
@@ -52,65 +54,107 @@ The project started from the observation that demand for personalized wellness s
 From a strategic perspective, the core challenge was to define a platform model able to create value for both users and ecosystem stakeholders.
 
 The proposed solution integrates platform logic, data-driven personalization and trust-building mechanisms through scientific evidence and curated user experience.
-  `,
-
-  pdfUrl: "/projects/celya.pdf",
-  slidesUrl: "https://your-slides-link.com"
-},
+    `,
+    pdfUrl: "/projects/celya.pdf",
+  },
   {
-    id: "noir-beauty",
-    title: "Noir Beauty",
-    category: "Product Design",
-    summary: "Designing a premium skincare e-commerce experience that feels as refined as the product itself.",
+    id: "lifesum-sustainabowl",
+    title: "Lifesum – SustainaBowl",
+    year: "2025",
+    category: "Service Innovation Sprint",
+    summary:
+      "Team-based sprint reimagining Lifesum’s healthy eating service through user insights, problem reframing, rapid prototyping, and experimentation, resulting in a community-driven service concept.",
+    overview:
+      "A rapid team-based innovation sprint focused on rethinking healthy eating as a more collaborative and engaging service experience.",
+    problem:
+      "The challenge was to move beyond individual food tracking and explore how shared habits, motivation, and behavioral triggers could improve user engagement.",
+    process:
+      "The project combined user insights, problem reframing, ideation, rapid prototyping, and experimentation to shape a more community-driven product direction.",
+    outcome:
+      "The final concept, SustainaBowl, reimagined Lifesum as a service that supports healthier eating through social interaction, accountability, and shared progress.",
+    tools: ["User Insights", "Problem Reframing", "Rapid Prototyping", "Experimentation"],
     cover: project2,
-    year: "2024",
-    overview: "Noir Beauty is a direct-to-consumer skincare brand targeting a discerning audience. They needed an e-commerce platform that matched the tactile luxury of their packaging.",
-    problem: "Their existing Shopify store felt generic and failed to communicate the brand's premium positioning. Conversion rates were below industry average.",
-    process: "We designed a bespoke shopping experience with immersive product storytelling, cinematic imagery, and a streamlined checkout. Every interaction was crafted to feel intentional.",
-    outcome: "Post-launch conversion rate improved by 65%. Average session duration increased by 3 minutes. The site was featured on Awwwards.",
-    tools: ["Figma", "React", "Three.js", "Shopify Plus"],
-    galleryImages: [project2, project4, project5],
+    galleryImages: [project2, project3],
+    pdfUrl: "/projects/lifesum-sustainabowl.pdf",
   },
   {
-    id: "atlas-wayfinding",
-    title: "Atlas Wayfinding",
-    category: "UX / Spatial Design",
-    summary: "A digital wayfinding system for a contemporary art museum, bridging physical space and digital interface.",
+    id: "subito-dpm",
+    title: "Subito.it - Digital Product Management",
+    year: "2025",
+    category: "Digital Product Management",
+    summary:
+      "Strategic product roadmap for Italy's leading re-commerce platform. Defined North Star Metric (Logged-in DAU), prioritised features using RICE framework, and designed AI-powered tools including a negotiation copilot and listing optimizer.",
+    overview:
+      "A product strategy project built around growth, engagement and prioritization for one of Italy’s leading digital marketplaces.",
+    problem:
+      "The challenge was to define a coherent roadmap linking user value, business goals and feature prioritization in a mature platform context.",
+    process:
+      "The project defined a North Star Metric, applied RICE prioritization, and explored AI-enabled product features to improve user efficiency and marketplace quality.",
+    outcome:
+      "The resulting roadmap combined strategic prioritization with concrete product opportunities such as an AI negotiation copilot and listing optimizer.",
+    tools: ["HEART framework", "North Star Metric", "RICE", "AI Copilot"],
     cover: project3,
-    year: "2024",
-    overview: "The Atlas Museum of Contemporary Art commissioned a wayfinding system that would work seamlessly across mobile devices and physical installations within the space.",
-    problem: "Visitors frequently got lost in the non-linear gallery layout. The existing signage system was minimal to the point of being unhelpful, and there was no digital solution.",
-    process: "We mapped the entire space in 3D and developed an AR-assisted wayfinding app alongside redesigned physical signage. The design language drew from the museum's own curatorial aesthetic.",
-    outcome: "Visitor satisfaction scores increased by 35%. The system was adopted as a case study by two design publications.",
-    tools: ["Unity", "ARKit", "Figma", "Swift"],
-    galleryImages: [project3, project1, project4],
+    galleryImages: [project3, project1],
+    pdfUrl: "/projects/subito-dpm.pdf",
   },
   {
-    id: "terra-editorial",
-    title: "Terra Editorial",
-    category: "Editorial Design",
-    summary: "Art direction and design for an independent publication exploring architecture and the natural world.",
+    id: "concherts",
+    title: "concHERts",
+    year: "2025",
+    category: "Service Design",
+    summary:
+      "concHERts is a mobile platform designed to help young women experience concerts and festivals with greater safety and confidence.",
+    overview:
+      "A service design and UX project addressing a clear need for safer, more confident concert and festival experiences for young women.",
+    problem:
+      "Field interviews highlighted that for female concert-goers, safety is not an optional feature but a prerequisite for fully enjoying the event experience.",
+    process:
+      "The project followed the full UX design process, from user research and journey mapping to information architecture and Figma prototyping.",
+    outcome:
+      "The final solution combined verified identity access, event-based group coordination, real-time safety actions, and an interactive venue map into a community-driven service spanning the full concert journey.",
+    tools: ["User Research", "Journey Mapping", "Information Architecture", "Figma Prototyping"],
     cover: project4,
-    year: "2023",
-    overview: "Terra is a biannual publication that sits at the intersection of architecture, ecology, and philosophy. We were brought on to define the visual identity and design the first three issues.",
-    problem: "The founders had rich content but no visual framework. They wanted something that felt simultaneously academic and accessible, printed and digital-native.",
-    process: "We developed a typographic system using Cormorant Garamond and a monospace companion, with a grid flexible enough for long-form essays and full-bleed photography.",
-    outcome: "The first issue sold out within two weeks. Terra was nominated for a Lead Award in Editorial Design.",
-    tools: ["InDesign", "Lightroom", "Figma", "Risograph"],
-    galleryImages: [project4, project5, project2],
+    galleryImages: [project4, project5],
+    pdfUrl: "/projects/concherts.pdf",
   },
   {
-    id: "silent-studio",
-    title: "Silent Studio",
-    category: "Web Design",
-    summary: "A portfolio and booking platform for a high-end recording studio, designed for discretion and atmosphere.",
+    id: "polibridge",
+    title: "Bridge - Shaping Purposeful Futures Hackathon",
+    year: "2025",
+    category: "Hackathon / Platform Concept",
+    summary:
+      "PoliBridge is a platform concept developed during a one-day hackathon at Polimi GSOM, designed as a digital and AI-powered solution for collaborative learning and societal impact.",
+    overview:
+      "A one-day hackathon project focused on collaborative learning, AI matching, and societal impact in Milan’s fragmented university ecosystem.",
+    problem:
+      "Despite over 200,000 students across 9 universities in Milan, there is no shared infrastructure to connect students across institutional boundaries for project collaboration.",
+    process:
+      "The concept was built around cross-institutional matching, AI-powered team assembly, structured mentorship, faculty credit integration, and real-world project sourcing.",
+    outcome:
+      "PoliBridge proposed a shared platform where students can form interdisciplinary teams, complete projects, and generate verifiable portfolio entries and skill badges with GSOM as trust anchor.",
+    tools: ["Platform Design", "AI Matching", "Collaborative Learning", "Societal Impact"],
     cover: project5,
+    galleryImages: [project5, project2],
+    pdfUrl: "/projects/polibridge.pdf",
+  },
+  {
+    id: "fratelli-green",
+    title: "Fratelli Green - Green Jobs Startup Project",
     year: "2023",
-    overview: "Silent Studio is a by-appointment recording space used by established musicians. They needed a web presence that communicated exclusivity without pretension.",
-    problem: "They had no website — all bookings were word-of-mouth. As demand grew, they needed a digital presence that maintained their intimate, curated feel.",
-    process: "We designed a dark, atmospheric site with ambient audio integration, minimal copy, and a private booking flow. The design evokes the feeling of stepping into the studio itself.",
-    outcome: "Booking requests increased 200% in the first quarter. The site won a CSS Design Award for Best UI.",
-    tools: ["Next.js", "GSAP", "Figma", "Sanity CMS"],
-    galleryImages: [project5, project1, project3],
+    category: "Startup Project",
+    summary:
+      "Co-founded an early-stage startup developing an educational product for children focused on environmental awareness.",
+    overview:
+      "An entrepreneurial project centered on sustainability education for children through story-based products.",
+    problem:
+      "The challenge was to turn an educational sustainability idea into a viable product and business concept with clear market positioning and financial structure.",
+    process:
+      "The work included business planning, product and marketing contribution, go-to-market thinking, financial structuring, budgeting, and coordination with sales and operations.",
+    outcome:
+      "The project won 1st prize at the Lombardy regional competition and received the Creativity Award by Disney Italy at the national Biz Factory competition.",
+    tools: ["Business Planning", "Go-to-Market", "Budgeting", "Product Strategy"],
+    cover: project2,
+    galleryImages: [project2, project4],
+    pdfUrl: "/projects/fratelli-green.pdf",
   },
 ];
