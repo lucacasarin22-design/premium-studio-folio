@@ -20,18 +20,18 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-18 md:py-20">
-      <div className="max-w-[1320px] mx-auto px-6 md:px-12">
+    <section id="projects" ref={sectionRef} className="py-14 md:py-16">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-12">
         <div
-          className={`mb-12 md:mb-14 text-center transition-all duration-1000 ${
+          className={`mb-8 md:mb-10 text-center transition-all duration-1000 ${
             visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <p className="font-body text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">
-            Selected Projects
+            Selected Work
           </p>
 
-          <p className="font-display text-5xl md:text-6xl text-foreground">
+          <p className="font-display text-4xl md:text-5xl text-foreground">
             Selected Projects
           </p>
 
@@ -40,19 +40,22 @@ const ProjectsSection = () => {
             business strategy, and structured analysis.
           </p>
         </div>
+      </div>
 
-        <div className="space-y-6 md:space-y-7">
-          {projects.map((project, i) => (
-            <div
-              key={project.id}
-              className={`transition-all duration-1000 ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
-              }`}
-              style={{ transitionDelay: `${0.12 + i * 0.1}s` }}
-            >
-              <ProjectCard project={project} />
-            </div>
-          ))}
+      {/* Horizontal scroll carousel */}
+      <div
+        className={`transition-all duration-1000 ${
+          visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-16"
+        }`}
+      >
+        <div className="overflow-x-auto scrollbar-hide">
+          <div className="flex gap-5 px-6 md:px-12 pb-4" style={{ width: "max-content" }}>
+            {projects.map((project) => (
+              <div key={project.id} className="w-[340px] md:w-[380px] flex-shrink-0">
+                <ProjectCard project={project} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
