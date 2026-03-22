@@ -30,21 +30,39 @@ const ProfessionalBackground = () => {
             Professional Background
           </h2>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="border border-border rounded-xl bg-card/50 p-5 md:p-6">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-2">
+          <div className="max-w-4xl mx-auto">
+            <div className="border border-border rounded-2xl bg-card/60 p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-6">
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-foreground">
+                  <h3 className="font-display text-2xl md:text-3xl text-foreground">
                     SCM & Logistics Analyst
                   </h3>
-                  <p className="font-body text-sm text-muted-foreground">
+                  <p className="font-body text-sm md:text-base text-muted-foreground mt-1">
                     B. Braun Group · Milan
                   </p>
                 </div>
-                <p className="font-body text-xs text-muted-foreground uppercase tracking-wider mt-1 md:mt-0">
+                <p className="font-body text-xs text-muted-foreground uppercase tracking-[0.2em]">
                   Feb 2025 – Oct 2025
                 </p>
               </div>
+
+              <ul className="space-y-4">
+                <li className="font-body text-sm md:text-base text-foreground leading-relaxed">
+                  Supported demand planning and forecasting processes, improving coordination between Global Supply Chain, Sales, Marketing, and Customer Service; contributed to maintaining <span className="font-semibold">96% on-time delivery performance</span> with the main 3PL partner.
+                </li>
+                <li className="font-body text-sm md:text-base text-foreground leading-relaxed">
+                  Monitored and analyzed logistics KPIs such as <span className="font-semibold">OTD, transport costs, and pallet returns</span> for a <span className="font-semibold">€6M annual contract</span> with a strategic 3PL provider, supporting performance reviews, penalty assessments, and contract governance decisions.
+                </li>
+                <li className="font-body text-sm md:text-base text-foreground leading-relaxed">
+                  Managed material lifecycle and planning parameters in <span className="font-semibold">SAP APO</span> (MRP, MOQ, lead time), supporting phase-in and phase-out decisions for Renal Care products.
+                </li>
+                <li className="font-body text-sm md:text-base text-foreground leading-relaxed">
+                  Produced analytical insights through <span className="font-semibold">Power BI dashboards</span> and ad-hoc analyses, including forecast vs. sales gaps, backorders, and ABC analysis, to support local stock and distribution decisions.
+                </li>
+                <li className="font-body text-sm md:text-base text-foreground leading-relaxed">
+                  Supported regulatory and compliance activities, collaborating with Regulatory Affairs on <span className="font-semibold">AIFA reporting</span> related to drug shortages.
+                </li>
+              </ul>
             </div>
           </div>
         </div>
