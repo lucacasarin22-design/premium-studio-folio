@@ -5,16 +5,23 @@ const Footer = () => {
         <p className="font-body text-xs text-muted-foreground tracking-wide">
           © {new Date().getFullYear()} Luca Casarin. All rights reserved.
         </p>
+
         <div className="flex items-center gap-8">
-          {["LinkedIn", "GitHub", "Email"].map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              {link}
-            </a>
-          ))}
+          <a
+            href="https://www.linkedin.com/in/lucafcasarin/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-500"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="mailto:luca.casarin22@gmail.com"
+            className="font-body text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground transition-colors duration-500"
+          >
+            Email
+          </a>
         </div>
       </div>
     </footer>
