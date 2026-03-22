@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import type { Project } from "@/data/projects";
 
 interface ProjectCardProps {
@@ -6,9 +5,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const targetUrl = project.pdfUrl || project.slidesUrl || project.externalProjectUrl || "#";
+
   return (
     <article className="group rounded-[18px] border border-border bg-card/70 p-4 transition-all duration-500 hover:border-primary/50 hover:bg-card shadow-sm h-full flex flex-col">
-      <Link to={`/project/${project.id}`} className="block">
+      <a href={targetUrl} target="_blank" rel="noreferrer" className="block">
         <div className="overflow-hidden rounded-xl border border-border bg-secondary/30">
           <img
             src={project.cover}
@@ -17,25 +18,25 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             loading="lazy"
           />
         </div>
-      </Link>
+      </a>
 
       <div className="mt-3 flex flex-col flex-1">
         <p className="font-body text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
           {project.year} · {project.category}
         </p>
 
-        <Link to={`/project/${project.id}`} className="block mt-2">
+        <a href={targetUrl} target="_blank" rel="noreferrer" className="block mt-2">
           <h3 className="font-display font-semibold text-lg text-foreground leading-[1.1] transition-colors duration-500 group-hover:text-primary">
             {project.title}
           </h3>
-        </Link>
+        </a>
 
         <p className="font-body text-xs italic text-muted-foreground leading-relaxed mt-2">
           {project.summary}
         </p>
 
         <div className="flex flex-wrap gap-1.5 pt-2 mt-auto">
-          {project.tools.slice(0, 3).map((tool) => (
+          {project.tools.slice(0, 4).map((tool) => (
             <span
               key={tool}
               className="font-body text-[10px] text-primary px-2 py-0.5 rounded-md bg-secondary border border-border"
@@ -46,12 +47,14 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         </div>
 
         <div className="pt-3">
-          <Link
-            to={`/project/${project.id}`}
+          <a
+            href={targetUrl}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center font-body text-xs font-semibold text-primary-foreground bg-primary px-4 py-2 rounded-lg hover:bg-primary/85 transition-all duration-500"
           >
             View Project
-          </Link>
+          </a>
         </div>
       </div>
     </article>
